@@ -37,7 +37,7 @@ App({
     // 初始化云环境
 
     wx.cloud.init({
-        env:'mamengkeji-9g3i82pg37b59653'
+        env:''
     })
     // 打印openid
     wx.cloud.callFunction({
