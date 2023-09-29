@@ -1,0 +1,11 @@
+<!--pages/aboutWork/aboutWork.wxml-->
+<!-- 介绍 -->
+<view class="midlle">
+    <image src="https://6d61-mamengkeji-9g3i82pg37b59653-1320854159.tcb.qcloud.la/%E7%AB%99%E5%86%85%E7%85%A7%E7%89%87/codedream.jpg?sign=0f1155be74d81aff356fb823f43a1b17&t=1695278711"></image>
+    <view><text style="color: white;">eac</text> 码梦网络科技服务工作室是一支专业网站建设团队，致力于为企业及个人提供优质的互联网服务，项目包括网站建设、网页设计、程序开发、大数据服务等。</view>
+</view>
+<view>
+    <text style="color: white;">eac</text>码梦网络科技服务工作室成立于2023年5月，诞生于一群拥有志同道合信念和执着追求的年轻人。我们拥有充满朝气的年轻团队，积极乐观，创造和谐的工作氛围，让工作成为一种快乐的生活是我们追求的理念，将视觉感知和艺术内涵融入到设计中，我们相信洋溢着思想的设计才是真正的设计，充实着思想的作品才是真正的作品。除了个性，我们强调的还有沟通;除了感性与激情，我们强调的还有冷静、理智和清醒的方向;除了设计，我们强调的还有设计背后的思考。赋予康少网络工作室一个清醒而敏感的性格，一个宽容而开放的态度，每一个作品都成为经典这是我们努力的目标 创造来自于完美细节的积累;
+</view>
+<view><text style="color: white;">eac</text>"码梦奇迹，燃亮未来！"我们相信我们可以用代码书写我们团队的未来！！！</view>
+<image src="https://6d61-mamengkeji-9g3i82pg37b59653-1320854159.tcb.qcloud.la/%E7%AB%99%E5%86%85%E7%85%A7%E7%89%87/2.png?sign=5fb3605aca7363e358ffda8a14ce9172&t=1695279982" style="width: 100%;border-radius: 20rpx;margin-top: 20rpx;"></image>

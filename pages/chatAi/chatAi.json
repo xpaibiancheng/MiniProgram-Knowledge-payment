@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "towxml":"../../towxml/towxml"
+      },
+      "navigationBarTitleText": "码小猿AI",
+  "navigationBarBackgroundColor": "#3478f6",
+  "navigationBarTextStyle": "white"
+}

@@ -1,0 +1,34 @@
+<!--pages/userCodeList/userCodeList.wxml-->
+<view  wx:if="{{detailRow.length==0}}" style="width: 100%;height: 500rpx;display: flex;flex-direction: column;justify-content: center;align-items: center;">
+    <image style="width: 150rpx;height: 150rpx;" src="/static/星球 (1).png" mode=""/>
+    <view style="color:rgb(107, 107, 107)">暂无项目源码，快星球看看吧~</view>
+</view>
+<view class="codeRows" wx:for="{{detailRow}}" wx:key="index" wx:if="{{detailRow.length!=0}}"> 
+    <view class="codeRowsLeft">
+        <view class="codeRowsLeftTitle">
+            <view>{{item.pay_name}}</view>
+            <view class="price">产品价格:<text style="color: rgb(241, 162, 14);font-weight: 550;">￥{{item.pay_price}}</text></view>
+        </view>
+        <view class="codeRowsLeftPrice" bindtap="bindFoundRe" data-index="{{index}}">
+            <image src="/static/浏览量.png" style="width: 50rpx;height: 50rpx;"></image>
+            <view>查看资源</view>
+        </view>
+    </view>
+    <view class="codeRowsRight">
+        {{item.pay_status}}
+    </view>
+</view>
+<image src="https://video-public.canva.cn/VAE_Cn2hJe0/v/5d3a5f13c0.gif" style="position: fixed;bottom:0rpx;z-index: 999;right:0rpx;width: 200rpx;height: 190rpx;"></image>
+<!-- 资源存储位置 -->
+<view class="codeProUrl" wx:if="{{resourceFlag==true}}" style="opacity:0" animation="{{animationData}}">
+    <view class="urlTop">
+        <view>码梦网络</view>
+        <view bindtap="bindClose">×</view>
+    </view>
+    <view class="urlName">存储应用:{{collectData.application}}</view>
+    <view class="urlAddress">
+        <text class="urlAddressuRL"  decode="{{true}}" >{{collectData.resourceUrl}}</text>
+        <view class="urlAddressCopy"  data-url="{{collectData.resourceUrl}}" bindtap="bindCopyResource">复制链接</view>
+    </view>
+</view>
+

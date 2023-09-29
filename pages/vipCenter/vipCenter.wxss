@@ -1,0 +1,95 @@
+/* pages/vipCenter/vipCenter.wxss */
+page{
+    background: rgb(247, 247, 247);
+}
+/* index.wxss */
+.vipTop{
+    width: 100%;
+    background-color: rgb(43, 161, 43);
+}
+.income{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 150rpx;
+}
+.incomeText{
+    font-size: 30rpx;
+}
+.incomeMoney{
+    font-size: 65rpx;
+    font-weight: 550;
+    padding-top: 20rpx;
+}
+.count_shareMoney{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding-top: 100rpx;
+    padding-bottom: 50rpx;
+    font-size: 30rpx;
+    
+}
+.count{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.shareMoney{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.countNum{
+    font-weight: 550;
+    padding-top: 20rpx;
+}
+
+.shareMoneyNum{
+    font-weight: 550;
+    padding-top: 25rpx;
+}
+/* index.wxss */
+.grid {
+    margin-top:40rpx ;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+   background-color: white;
+  }
+  
+  .grid-item {
+    width: 32.5%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(247, 247, 247);
+
+  }
+  
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333333;
+  }
+  

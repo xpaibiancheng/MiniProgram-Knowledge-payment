@@ -1,0 +1,125 @@
+<view class="idnexTopbg">
+    <image src="/static/veer-374337891.jpg"></image>
+</view>
+<!-- 导航栏 -->
+<view class="indexTopNav">
+    <view class="NavRows {{handIndex==index?'clickNavRows':''}}" wx:for="{{topNav}}" wx:key="index" data-index="{{index}}" data-value="{{item.value}}" bindtap="bindNavTo">{{item.key}}</view>
+</view>
+<!-- 轮播图 -->
+<view class="banner" bindtap="bindToAutor">
+   <swiper indicator-dots indicator-active-color="#fff" circular autoplay interval="4000">
+      <swiper-item wx:for="{{list}}" wx:key="bannerId">
+        <image class="bannerimage" src="{{item}}"/>
+      </swiper-item>
+   </swiper>
+</view>
+<!-- 功能区 -->
+<view class="function">
+  <view class="functon_row" bindtap="bindMore">
+    <image src="/static/middleread.png"></image>
+    <view>技术文章</view>
+  </view>
+  <view class="functon_row" bindtap="bindCode">
+    <image style="width: 100rpx;height: 85rpx;" src="/static/源代码.png"></image>
+    <view>项目源码</view>
+  </view>
+  <view class="functon_row" bindtap="bindtool">
+    <image src="/static/工具箱.png"></image>
+    <view>编程工具箱</view>
+  </view>
+  <view class="functon_row" bindtap="bindNavToAi">
+    <image src="/static/chat.png" style="border-radius: 25rpx;overflow: hidden;"></image>
+    <view>码小猿</view>
+   
+  </view>
+</view>
+<!-- 国庆 -->
+<view bindtap="bindTapGuuoqing" style="width: 95%;height: 300rpx;margin: auto;border-radius: 20rpx;overflow: hidden;">
+    <image style="width: 100%;height: 100%;" src="https://6d61-mamengkeji-9g3i82pg37b59653-1320854159.tcb.qcloud.la/%E7%AB%99%E5%86%85%E7%85%A7%E7%89%87/%E6%AC%A2%E5%BA%A6%E5%9B%BD%E5%BA%86%20(1).png?sign=35d52434b1e9faf0221ee6b080d9256f&t=1695890490"></image>
+</view>
+<!--微信公众号 -->
+<view class="publiaCcount"> 
+    <view class="publicTop" bindtap="bindAttention">
+        <view class="publicLeftRight">
+            <image src="/static/articletitleicon.png" mode=""/>
+            <view>微信公众号</view>
+        </view>
+        <view class="publicRight">
+            ><text>更多文章</text>
+        </view>
+    </view>
+    <scroll-view scroll-x scroll-with-animation="true" class="publiaCcount_scoller"  wx:if="{{pubList.length!=0}}">
+        <view  class="scollerRows" bindtap="bindGongzhongView" wx:for="{{pubList}}" wx:key="index" data-index="{{index}}">
+            <image class="scollerRowsImg" src="{{item.showImgs}}"></image>
+            <view class="scollerRowsTitle">{{item.title}}</view>
+            <view class="scollerRowsInfo">
+                <view class="scollerRowsInfoTime">{{item.subTime}}</view>
+                <view class="scollerRowsInfoSkill">
+                    <image src="/static/浏览量.png"></image>
+                    <view style="margin-left: 15rpx;">{{item.studyCount}}</view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+    <view style="width: 100%;height: 200rpx;display: flex;flex-direction: column;justify-content: center;align-items: center;" wx:if="{{pubList.length==0}}">
+        <image style="width: 150rpx;height: 150rpx;" src="/static/没有数据.png"></image>
+        <view style="font-size: 25rpx;color: rgb(107,107,107);margin-top: 10rpx;">星主爆肝写文中</view>
+    </view>
+</view>
+<!--项目源码最新上新 -->
+<view class="publiaCcount"> 
+    <view class="publicTop">
+        <view class="publicLeftRight">
+            <image src="/static/articletitleicon.png" mode=""/>
+            <view>精品项目源码</view>
+        </view>
+        <view class="publicRight">
+            ><text>更多项目</text>
+        </view>
+    </view>
+    <scroll-view scroll-x scroll-with-animation="true" class="publiaCcount_scoller" wx:if="{{codePro.length!=0}}">
+        <view  class="scollerRows" bindtap="bindCodeProNavTO" wx:for="{{codePro}}" wx:key="index" data-index="{{index}}">
+            <image class="scollerRowsImg" src="{{item.imagesDetail}}"></image>
+            <view class="scollerRowsTitle">{{item.title}}</view>
+            <view class="scollerRowsInfo">
+                <view class="scollerRowsInfoTime">{{item.subTime}}</view>
+                <view class="scollerRowsInfoSkill">
+                    <view style="background: rgb(175, 147, 76);color: white;border-radius: 5rpx;font-size: 20rpx;" >{{item.studyCount}}人学习</view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+    <view style="width: 100%;height: 200rpx;display: flex;flex-direction: column;justify-content: center;align-items: center;" wx:if="{{codePro.length==0}}">
+        <image style="width: 150rpx;height: 150rpx;" src="/static/没有数据.png"></image>
+        <view style="font-size: 25rpx;color: rgb(107,107,107);margin-top: 10rpx;">星主爆肝写文中</view>
+    </view>
+</view>
+<!-- 文章 -->
+<view>
+  <view class="articleTop">
+  <view class="articleTitleLeft">
+    <image src="/static/articletitleicon.png" style="width: 65rpx;height: 65rpx;"></image>
+    <view>最新文章</view>
+  </view>
+  <view class="articleTitleRight" style="color: rgb(107,107,107);font-size: 25rpx;margin-right: 20rpx;" bindtap="bindMore">更多文章</view>
+  </view>
+</view>
+<!-- 文章内容 -->
+<view class="article" wx:for="{{article}}" wx:key="index" bindtap="bindIndex" data-index="{{index}}">
+    <view class="articleLeft">
+      <image src="{{item.showImgs}}" style="width: 330rpx;height: 220rpx;"></image>
+    </view>
+    <view class="articleRight">
+      <view class="articleRightTitle" style="font-size: 28rpx;">{{item.title}}</view>
+      <view class="articleRightInfo">
+        <view class="articleRightTime" style="color: rgb(107,107,107);font-size: 25rpx;">{{item.subTime}}</view>
+        <view>学习人数:{{item.count}}</view>
+      </view>
+    </view>
+</view>
+<!-- 底部留白 -->
+<!-- 底部提示 -->
+<view class="indexButtoon" bindtap="bindMore">亲爱的同志，点我查看更多~~</view>
+<view style="width: 100%;height: 10rpx;"></view>
+<image src="https://video-public.canva.cn/VAE_Cn2hJe0/v/5d3a5f13c0.gif" style="position: fixed;bottom:0rpx;z-index: 999;right:0rpx;width: 200rpx;height: 190rpx;"></image>
+<!-- <image src="https://video-public.canva.cn/VAEj3P8zV0c/v/fd1a927750.gif" style="position: fixed;top: 500rpx;z-index: 999;width: 150rpx;height: 250rpx;"></image> -->

@@ -1,0 +1,59 @@
+/* pages/vipBuy/vipBuy.wxss */
+page{
+    background-color: rgb(247, 247, 247);
+}
+.vipInfo{
+    width: 95%;
+    border-radius: 20rpx;
+    background-color: white;
+    margin: 20rpx auto;
+}
+.vipInfo>view{
+    width: 95%;
+    margin: 20rpx auto;
+    color: rgb(107, 107, 107);
+}
+.name_buy{
+    width: 97%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20rpx;
+   
+}
+.name{
+    font-weight: 550;
+    font-size: 37rpx;
+    color: black;
+}
+.buyVip{
+    width: 160rpx;
+    height: 60rpx;
+    border-radius: 30rpx;
+    background-color:rgb(247, 212, 15);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.day_price{
+    width: 97%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10rpx;
+}
+.price{
+    color: orange;
+    font-weight: 550;
+    font-size: 35rpx;
+}
+.chatDownLoad{
+    padding-bottom: 20rpx;
+   
+}

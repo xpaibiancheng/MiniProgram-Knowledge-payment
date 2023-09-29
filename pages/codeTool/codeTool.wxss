@@ -1,0 +1,55 @@
+/* pages/tool/tool.wxss */
+page{
+    background-color: rgb(247, 247, 247);
+}
+.rows{
+    width: 97%;
+    margin: 20rpx auto;
+  }
+  .title{
+    font-weight: 550;
+    margin-left: 20rpx;
+  }
+  .tools{
+    width:97%;
+    margin: 20rpx auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: start;
+    
+  }
+  .list{
+    width: 48%;
+    height: 330rpx;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    margin-top: 15rpx;
+    margin-left: 10rpx;
+  }
+  .list>image{
+      width: 95%;
+      height: 200rpx;
+      margin-top: 10rpx;
+  }
+  .listText{
+      width: 95%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 27rpx;
+    margin-top: 15rpx;
+  }
+  .txt_row02{
+    margin-top: 20rpx;
+    margin-left: 20rpx;
+    width: 300rpx;
+    height: 10rpx;
+    border-radius: 30rpx;
+    background:-webkit-linear-gradient(left,rgb(92,104,206),rgb(171,179,241),white);
+  }

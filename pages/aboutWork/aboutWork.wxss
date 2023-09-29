@@ -1,0 +1,27 @@
+/* pages/aboutWork/aboutWork.wxss */
+page{
+    line-height: 2;
+
+}
+.midlle{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.top{
+    width: 100%;
+    text-align: center;
+    font-size: 50rpx;
+    padding-top: 20rpx;
+    padding-bottom: 30rpx;
+}
+.midlle>image{
+    width: 40%;
+    height: 280rpx;
+}
+.midlle>view{
+    width: 60%;
+    line-height: 1.5;
+    
+
+}

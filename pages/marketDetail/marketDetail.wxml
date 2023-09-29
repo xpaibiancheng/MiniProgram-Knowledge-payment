@@ -1,0 +1,21 @@
+<!--pages/codeProDetail/codeProDetail.wxml-->
+<!-- 视频 -->
+<view class="detailVideo">
+    <video class="detailVideoPick"  controls="true" src="{{detailRow.video}}"></video>
+</view>
+<!-- 详情 -->
+<view class="detailInfo">
+    <!-- 详情 -->
+    <view class="detailco" style="padding-top: 20rpx;">
+        <image src="/static/会员中心.png" mode=""/>
+        <view style="margin-left: 15rpx;">介绍</view>
+    </view> 
+    <view style="padding-top: 20rpx;border-top: #ccc solid 3rpx;margin:10rpx auto;width: 95%;"></view>
+    <view class="detailText">
+            <rich-text nodes="{{detailRow.projectDetail}}"></rich-text>
+            <image wx:for="{{detailRow.imagesDetail}}" wx:for-item="imgItem" src="{{imgItem}}" style="width: 100%;border-radius: 15rpx;overflow: hidden;height: 100%;" mode="widthFix"></image>
+    </view>
+</view>
+<view style="width: 100%;height: 60rpx;"></view>
+
+

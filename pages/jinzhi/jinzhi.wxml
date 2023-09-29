@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="title">进制转换器</view>
+  <view class="form">
+    <view class="item">
+      <view>二进制：</view>
+      <input type="number" bindinput="binaryInput" value="{{binary}}" />
+    </view>
+    <view class="item">
+      <view>八进制：</view>
+      <input type="number" bindinput="octalInput" value="{{octal}}" />
+    </view>
+    <view class="item">
+      <view>十进制：</view>
+      <input type="number" bindinput="decimalInput" value="{{decimal}}" />
+    </view>
+    <view class="item">
+      <view>十六进制：</view>
+      <input type="text" bindinput="hexInput" value="{{hex}}" />
+    </view>
+  </view>
+</view>

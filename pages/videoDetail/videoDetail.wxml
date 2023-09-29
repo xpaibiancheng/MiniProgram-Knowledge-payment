@@ -1,0 +1,82 @@
+<!--pages/codeProDetail/codeProDetail.wxml-->
+<!-- 视频 -->
+<view class="detailVideo">
+    <video class="detailVideoPick"  controls="true" src="{{detailRow.video}}"></video>
+</view>
+<!-- 介绍 -->
+<view class="titlePriceSoon">
+    <view class="titleDetail" style="font-weight: 550;">{{detailRow.title}}</view>
+    <view class="priceSoon">
+        <!-- 价格 -->
+        <view class="price" style="color:goldenrod;font-weight: 550;font-size: 37rpx;">￥{{detailRow.price}} <text wx:if="{{detailRow.price!=0}}" style="font-size: 27rpx;color: rgb(107, 107, 107);">(会员免费)</text><text wx:if="{{detailRow.price==0}}" style="font-size: 27rpx;color: rgb(107, 107, 107);">(免费资源)</text></view>
+        <!-- 学习人数 -->
+        <view class="studyNum" style="font-size: 30rpx;color: rgb(107, 107, 107);">{{detailRow.studyCount}}人学习</view>
+    </view>
+</view>
+<!-- 详情 -->
+<view class="detailInfo">
+    <!-- 详情 -->
+    <view class="detailco" style="padding-top: 20rpx;">
+        <view class="detailcoRows">
+            <image src="/static/会员中心.png" mode=""/>
+            <view style="margin-left: 15rpx;">项目详情</view>
+        </view>
+        <view class="detailcoRows" bindtap="bindaddPlan">
+            <image src="/static/分享.png" mode=""/>
+            <view style="margin-right: 15rpx;color: orange;font-weight: 550;">点我加入学习</view>
+        </view>
+    </view> 
+    <view style="padding-top: 20rpx;border-top: #ccc solid 3rpx;margin:10rpx auto;width: 95%;"></view>
+    <view class="detailText">
+            <rich-text nodes="{{detailRow.detail}}"></rich-text>
+            <image wx:for="{{detailRow.imagesDetail}}" wx:for-item="imgItem" src="{{imgItem}}" style="width: 100%;border-radius: 15rpx;overflow: hidden;max-height: 100%;" mode="widthFix"></image>
+    </view>
+</view>
+<view style="width: 100%;height: 60rpx;"></view>
+<view class="detailBottom">
+    <view style="background: thistle;margin-left: 15rpx;">
+        <button open-type="contact" bindcontact="handleContact" session-from="sessionFrom" style="background: thistle;color: white;font-size: 27rpx;width: 90%;">联系客服</button>    
+    </view>
+    <!-- 会员 -->
+    <view style="background:steelblue;" wx:if="{{vipFlag==1}}" bindtap="bindShare">瓜分盈利</view>
+    <view style="background: seagreen;margin-right: 15rpx;"  wx:if="{{vipFlag==1}}" bindtap="bindGetResource">获取资源</view>
+    <!-- 非会员 -->
+    <view style="background:steelblue;"  wx:if="{{vipFlag==0}}" bindtap="bindShareNoMoney">免费获得</view>
+    <view style="background: seagreen;margin-right: 15rpx;"  wx:if="{{vipFlag==0}}" bindtap="bindBuy">立即购买</view>
+</view>
+<!-- 资源存储位置 -->
+<view class="codeProUrl" wx:if="{{resourceFlag==true}}" style="opacity:0" animation="{{animationData}}">
+    <view class="urlTop">
+        <view>码梦网络</view>
+        <view bindtap="bindClose">×</view>
+    </view>
+    <view class="urlName">方式一:{{detailRow.applicationOne}}</view>
+    <view class="urlAddress">
+        <text class="urlAddressuRL"  decode="{{true}}" >{{detailRow.styleTwo}}</text>
+        <view class="urlAddressCopy"  data-url="{{detailRow.styleTwo}}" bindtap="bindCopyResource">复制链接</view>
+    </view>
+    <view class="urlName">方式二:{{detailRow.applicationTwo}}</view>
+    <view class="urlAddress">
+        <image  src="{{detailRow.styleOne}}" data-url="{{detailRow.styleOne}}" bindtap="bindPreviewTwo" style="width: 150rpx;height: 150rpx;" mode=""/>
+    </view>
+</view>
+<!-- 下单 -->
+<view class="payStyleSelect" wx:if="{{payStyleFlag==true}}">
+    <view class="styleRows">
+        <view class="styleRowsText">付款方式</view>
+        <view class="styleRowsClose" bindtap="bindClosePay">×</view>
+    </view>
+    <view class="styleRadios">
+        <radio-group class="styleRgroups" bindchange="radioChange">
+            <view style="display: flex;flex-direction: row;align-items: center;">
+                <radio value="vip"  style="padding-top: 30rpx;">开通会员免费下载</radio>
+                <image src="/static/推荐 (2).png" style="height: 60rpx;width: 70rpx;margin-top: 20rpx;margin-left: 10rpx;" mode=""/>
+            </view>
+            <radio value='payNow' style="margin-top: 20rpx;padding-bottom: 30rpx;padding-top: 20rpx;">立即购买</radio>
+        </radio-group>
+    </view>
+    <view class="confirmBu">
+        <view style="border-right:solid 2rpx #ccc;" bindtap="bindClosePay">取消</view>
+        <view bindtap="bindSubPay">确定</view>
+    </view>
+</view>

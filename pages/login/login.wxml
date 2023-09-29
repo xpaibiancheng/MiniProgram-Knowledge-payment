@@ -1,0 +1,13 @@
+<!--pages/login/login.wxml-->
+<!-- 头像 -->
+<view class="login_Image">
+  <button class="avatar" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+    <image class="avatarImg" src="{{avatarUrl}}"></image>
+  </button>
+</view>
+<!-- 信息单子 -->
+<view class="input_Info">
+  <input class="login_input" bindinput="bindNickname" placeholder="请输入昵称"/>
+</view>
+<!-- 提交 -->
+<button class="login_sub" bindtap="bindSubmit">立刻登录</button>

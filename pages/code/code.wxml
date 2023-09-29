@@ -1,0 +1,48 @@
+<!--pages/code/code.wxml-->
+<!-- 搜索页 -->
+<view class="codeSearch">
+    <input type="text" value="{{inputValueSearch}}" placeholder="全星球内搜素文章" bindinput="bindInptTo"/>
+    <button type="primary" bindtap="bindSearchKeyWord">搜素</button>
+</view>
+<!-- 搜素 -->
+<scroll-view wx:if="{{regexFlag==true}}" class="codeSearchHidden" scroll-y>
+    <view class="hiddenText" wx:for="{{regexLists}}" wx:key="index" data-index="{{index}}" bindtap="bindClickValue">{{item}}</view>
+</scroll-view>
+<!-- 筛选 -->
+<scroll-view wx:if="{{codePro.length!=0}}" scroll-x="true" scroll-with-animation="true" class="codeClass">
+    <view class="codeClassRow {{handOneIndex==index?'classFilter':''}}" wx:for="{{codeProLists}}" wx:key="index" data-index="{{index}}" data-value="{{item}}" bindtap="bindFilterOne">
+        <text style="padding-left: 10rpx;padding-right: 10rpx;">{{item}}</text>
+    </view>
+</scroll-view>
+<scroll-view wx:if="{{codePro.length!=0}}" scroll-x="true" scroll-with-animation="true" class="codeClass">
+    <view class="codeClassRow {{handTwoIndex==index?'classFilter':''}}" wx:for="{{filterTwo}}" wx:key="index" data-index="{{index}}" data-value="{{item.value}}" bindtap="bindFilterTwo">
+        <text style="padding-left: 10rpx;padding-right: 10rpx;">{{item.key}}</text>
+    </view>
+</scroll-view>
+<!-- 资源区 -->
+<scroll-view wx:if="{{codePro.length!=0}}" class="codeProView" scroll-y scroll-with-animation="true">
+    <view class="codeProViewTemp">
+        <view class="codeProViewRows" wx:for="{{codePro}}" wx:key="index" data-index="{{index}}" bindtap="navToCodeProDetail">
+            <!-- 图片 -->
+            <image class="codeProViewRowsImg" src="{{item.imagesDetail[0]}}" mode=""/>
+            <!-- 标题 -->
+            <view class="codeProViewRowsTitle" wx:if="{{item.price>0}}">
+                [付费或会员]{{item.title}}
+            </view>
+            <!-- 标题 -->
+            <view class="codeProViewRowsTitle" wx:if="{{item.price==0}}">
+                [开放资源]{{item.title}}
+            </view>
+            <!--价格和学习的人数  -->
+            <view class="codeProViewRowsPriceNum">
+                <view class="codeProViewRowsPrice">￥{{item.price}}</view>
+                <view class="codeProViewRowsNum">{{item.studyCount}}人学习</view>
+            </view>
+        </view>
+    </view>
+</scroll-view>
+<view  wx:if="{{codePro.length==0}}" style="width: 100%;height: 500rpx;display: flex;flex-direction: column;justify-content: center;align-items: center;">
+    <image style="width: 150rpx;height: 150rpx;" src="/static/星球 (1).png" mode=""/>
+    <view style="color:rgb(107, 107, 107)">消失了:404</view>
+</view>
+

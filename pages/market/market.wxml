@@ -1,0 +1,32 @@
+<!-- 导航栏首页 -->
+<view class="classNavIndex">
+    <view class="navIndexRows {{handIndexOne==index?'clickStyle':''}}" wx:for="{{classNav}}" wx:key="index" data-index="{{index}}" data-value="{{item.value}}" bindtap="bindClickChange">{{item.key}}</view>
+</view>
+<image src="https://6d61-mamengkeji-9g3i82pg37b59653-1320854159.tcb.qcloud.la/%E7%AB%99%E5%86%85%E7%85%A7%E7%89%87/%E5%BE%AE%E4%BF%A1%E5%9C%A8%E7%BA%BF%E5%92%A8%E8%AF%A2%EF%BC%9AA2020brave%20(1).png?sign=6b5a6864e375b6791ce358651aa05b3d&t=1695781555" style="width: 100%;height: 230rpx;"></image>
+<view class="classInfo">
+    <view class="classInfo_Left">
+            <view class="{{handIndexTwo==index?'clickStyleTwo':''}}" wx:for="{{marketRowsList}}" wx:key="index" data-index="{{index}}" data-name="{{item}}" bindtap="bindSelectTwo">{{item}}</view>
+    </view>
+    <view class="classInfo_Right">
+            <!-- 顶部 -->
+            <view class="classInfoRghtTop">
+                <text>--------</text>
+                <view>{{className}}</view>
+                <text>--------</text>
+            </view>
+            <!--内容 -->
+            <scroll-view scroll-y="true" class="classInfoDetail">
+                <view class="classInfoDetailRows" wx:for="{{marketRows}}" wx:key="index" data-index="{{index}}" bindtap="bindMarketDetail">
+                    <image class="classInfoDetailRowsImgs" src="{{item.showImgs}}" mode=""/>
+                    <view class="classInfoDetailRowsRight">
+                        <view class="DetailRowsRightTitle">{{item.title}}</view>
+                        <view class="DetailRowsRightBo">
+                            <view class="DetailRowsRightBoLeft">编号:{{item.code}}</view>
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+    </view>
+    
+    
+</view>

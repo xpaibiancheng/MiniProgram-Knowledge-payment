@@ -1,0 +1,69 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/code/code",
+    "pages/market/market",
+    "pages/veido/veido",
+    "pages/user/user",
+    "pages/gongzhongView/gongzhongView",
+    "pages/codeProDetail/codeProDetail",
+    "pages/chatAi/chatAi",
+    "pages/login/login",
+    "pages/vipBuy/vipBuy",
+    "pages/vipCenter/vipCenter",
+    "pages/serviceCenter/serviceCenter",
+    "pages/aboutWork/aboutWork",
+    "pages/aboutMini/aboutMini",
+    "pages/articleMore/articleMore",
+    "pages/videoDetail/videoDetail",
+    "pages/marketDetail/marketDetail",
+    "pages/userCodeList/userCodeList",
+    "pages/userVideoList/userVideoList",
+    "pages/jinzhi/jinzhi",
+    "pages/codeTool/codeTool",
+    "pages/userPhoto/userPhoto"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+      "list": [
+          {
+          "pagePath": "pages/index/index",
+          "text": "主页",
+          "iconPath": "/static/index02.png",
+          "selectedIconPath": "/static/index01.png"
+      },{
+        "pagePath": "pages/code/code",
+        "text": "项目源码",
+        "iconPath": "/static/share02.png",
+        "selectedIconPath": "/static/share01.png"
+    },{
+        "pagePath": "pages/veido/veido",
+        "text": "视频学习",
+        "iconPath": "/static/项目 (1).png",
+        "selectedIconPath": "/static/项目 (2).png"
+    },{
+        "pagePath": "pages/market/market",
+        "text": "产品定制",
+        "iconPath": "/static/定制 (1).png",
+        "selectedIconPath": "/static/定制.png"
+    },{
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/static/user02.png",
+        "selectedIconPath": "/static/user.png"
+    }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "permission":{
+    "scope.writePhotosAlbum":{
+        "desc":"保存到相册"
+    }
+  }
+}

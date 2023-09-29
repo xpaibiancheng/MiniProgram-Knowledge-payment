@@ -1,0 +1,4 @@
+/* pages/aboutMini/aboutMini.wxss */
+page{
+    line-height: 2;
+}

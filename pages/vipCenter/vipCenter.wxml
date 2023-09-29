@@ -1,0 +1,25 @@
+<!--pages/vipCenter/vipCenter.wxml-->
+<view class="vipTop">
+    <view class="income">
+            <view class="incomeText">推广收益</view>
+            <view class="incomeMoney">￥{{moneySum}}</view>
+    </view>
+    <view class="count_shareMoney">
+        <view class="count">
+            <view class="countText">绩效点数</view>
+            <view class="countNum">{{jixiao.value}}%</view>
+        </view>
+        <view class="shareMoney"> 
+            <view class="shareMoneyText">推广数量</view>
+            <view class="shareMoneyNum">{{num}}</view>
+        </view>
+    </view>
+</view>
+<!-- index.wxml -->
+<view class="grid">
+  <view class="grid-item" wx:for="{{gridData}}" wx:key="index" bindtap="bindTapNow" data-index="{{index}}">
+    <image class="icon" src="{{item.icon}}"></image>
+    <text class="text">{{item.text}}</text>
+  </view>
+</view>
+

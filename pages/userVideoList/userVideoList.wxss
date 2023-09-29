@@ -1,0 +1,132 @@
+/* pages/userCodeList/userCodeList.wxss */
+page{
+    background-color: rgb(247, 247, 247);
+
+}
+.codeRows{
+    width: 97%;
+    background-color: white;
+    border-radius: 20rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20rpx auto;
+    overflow: hidden;
+}
+.codeRowsLeft{
+    width: 80%;
+    height: 180rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.codeRowsLeftTitle{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15rpx;
+}
+.price{
+    padding-top: 40rpx;
+}
+.codeRowsLeftPrice{
+    width: 40%;
+    height: 100%;
+    background-color: rgb(230, 168, 115);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.codeRowsRight{
+    width: 20%;
+    height: 180rpx;
+    background-color: teal;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
+}
+/* 资源获取 */
+.codeProUrl{
+    position: fixed;
+    top: 350rpx;
+    left: 70rpx;
+    width: 80%;
+    height: 500rpx;
+    background-color:white ;
+    border-radius: 20rpx;
+    border: 2px solid #3478f6; /* 设置蓝色边框 */
+    box-shadow: 0 0 3px #3478f6;
+    display: flex;
+    flex-direction: column;
+
+}
+.urlTop{
+    width: 98%;
+    height: 60rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    box-shadow:0 1px #3478f6;
+    margin:10rpx auto;
+}
+.urlName{
+    width: 98%;
+    margin: 10rpx auto;
+}
+.urlAddress{
+    width: 98%;
+    margin: 10rpx auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.urlAddressuRL{
+    width: 80%;
+    border: 2px solid #3478f6; /* 设置蓝色边框 */
+    box-shadow: 0 0 1px #3478f6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+   
+}
+.urlAddressCopy{
+    background-color:green;
+    height: 50rpx;
+    color: white;
+    font-size: 27rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 动画 */
+.fade-in-down {
+    animation-name: fade-in-down;
+    animation-duration: 1s;
+  }
+  
+  @keyframes fade-in-down {
+    from {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+} 

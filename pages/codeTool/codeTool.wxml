@@ -1,0 +1,13 @@
+<!--pages/tool/tool.wxml-->
+<view class="row02 rows">
+  <view class="title">实用网站导航</view>
+  <view class="txt_row02"></view>
+  <view class="tools">
+    <view class="list" wx:for="{{detailRows}}" wx:key="index" bindtap="bindCollection" data-url="{{item.url}}" data-index="{{index}}">
+        <image src="{{item.showImg}}"></image>
+        <view class="listText">
+            {{item.title}}
+        </view>
+    </view>
+  </view>
+</view>

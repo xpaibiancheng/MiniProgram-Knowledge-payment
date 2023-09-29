@@ -1,0 +1,118 @@
+/* pages/veido/veido.wxss */
+page{
+    background-color: rgb(247, 247, 247);
+}
+/* 搜索框 */
+.codeSearch{
+    width: 95%;
+    height: 70rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50rpx;
+    margin:20rpx auto 0;
+}
+.codeSearchImg{
+    width: 50rpx;
+    height: 50rpx;
+    margin-left: 20rpx;
+}
+/*  */
+.marketAll{
+    width: 100%;
+    height:1200rpx;
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    margin-top: 20rpx;
+}
+.marLaft{
+    width: 25%;
+    height: 100%;
+    background-color: white;
+}
+.marLaftText{
+    width: 100%;
+    text-align: center;
+    margin-top: 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+.markLaTextBind{
+    background-color:rgb(247, 247, 247) ;
+    color: #3478f6;
+    font-weight: 550;
+}
+.marRight{
+    width: 75%;
+    height: 100%;
+    background-color: white;
+    margin-left: 15rpx;
+}
+.marRightScroll{
+    width: 95%;
+    margin: 20rpx auto;
+    padding-left: 20rpx;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: start;
+}
+/*  */
+/* 资源 */
+
+.codeProViewRows{
+    width: 98%;
+    height: 200rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: center; */
+    background-color: rgb(247, 247, 247);
+}
+.codeProViewRowsImg{
+    width:40%;
+    height: 180rpx;
+    padding-top: 10rpx;
+    margin-left: 15rpx;
+}
+.codeProViewRight{
+    width: 55%;
+    height: 180rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 15rpx;
+    border-radius: 15rpx;
+}
+.codeProViewRowsTitle{
+    width: 95%;
+    font-size: 27rpx;
+    height: 150rpx;
+}
+.codeProViewRowsPriceNum{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15rpx;
+}
+.codeProViewRowsPrice{
+    color: gold;
+    font-size: 30rpx;
+    margin-left: 10rpx;
+}
+.codeProViewRowsNum{
+    color: white;
+    background-color:rgb(175, 147, 76);
+    border-radius: 10rpx;
+    font-size: 27rpx;
+    margin-right: 10rpx;
+}

@@ -1,0 +1,124 @@
+/* pages/articleMore/articleMore.wxss */
+page{
+    background-color: rgb(247, 247, 247);
+}
+/* 搜索框 */
+.codeSearch{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin:20rpx auto;
+
+}
+.codeSearch>input{
+    background-color: white;
+    border-radius: 20rpx;
+    width:70%;
+    height: 70rpx;
+    padding-left: 20rpx;
+}
+.codeSearch>button{
+    width: 150rpx;
+    font-size: 27rpx;
+}
+/* 搜索框反应的内容 */
+.codeSearchHidden{
+    width: 510rpx;
+    height: 200rpx;
+    background-color: white;
+    position: absolute;
+    top: 95rpx;
+    z-index: 999;
+    left: 20rpx;
+    border: 2px solid white; /* 设置蓝色边框 */
+    box-shadow: 0 0 5px #3478f6; /* 添加发光效果 */
+}
+.hiddenText{
+    margin-top: 20rpx;
+    margin-left: 20rpx;
+}
+/*大类 */
+.classNavIndex{
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+.navIndexRows{
+    width: 100%;
+    height: 60rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.clickStyle{
+    border-bottom: solid 5rpx cornflowerblue;
+    font-weight: 550;
+
+}
+/* 分类 */
+.codeClass{
+    width:750rpx;
+    height: 60rpx;
+    margin: 25rpx auto;
+    white-space: nowrap;
+    line-height: 2;
+
+}
+.codeClassRow{
+    display: inline-flex;
+    margin-left: 20rpx;
+}
+/* 筛选时样式 */
+.classFilter{
+    background-color: #3478f6;
+    color: white;
+    border-radius: 15rpx;
+}
+/* 文章内容 */
+.article{
+    width: 95%;
+    height: 250rpx;
+    background-color: white;
+    border-radius: 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20rpx auto;
+  }
+  .articleLeft,.articleRight{
+    width: 45%;
+    height: 85%;
+  }
+  .articleLeft{
+    margin-right: 20rpx;
+  }
+  .articleRight{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10rpx;
+  }
+  .articleRightTitle{
+    height: 80%;
+    width: 100%;
+  }
+  .articleLeft>image{
+    border-radius: 10rpx;
+    overflow: hidden;
+  }
+  .articleRightInfo{
+    width: 100%;
+    color: rgb(107, 107, 107);
+    font-size: 25rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }

@@ -1,0 +1,31 @@
+<view class="chatboot">
+      <image src="https://636c-cloud1-4gsna3lu4fd8e5fb-1313325135.tcb.qcloud.la/xpblog/IMG_5491(20230320-133815).PNG?sign=bb1bc83cbc140f0860fefad599827d7c&t=1679290760" style="width: 70rpx;height:70rpx;overflow: hidden;border-radius: 50rpx;margin-top: 20rpx;margin-right: 15rpx;margin-left: 20rpx;"></image>
+      <view class="chatboottop">
+        <view class="rowright">您好，我是码小猿，一人工智能助手帮助您更好的学习</view>
+        <view class="rowright">例如：</view>
+        <view class="rowright row01" bindtap="bindExample" data-name="用C语言写一个顺序表">用C语言写一个顺序表</view>
+        <view class="rowright row01" bindtap="bindExample" data-name="用PHP写一个炫酷的登录页面">用PHP写一个炫酷的登录页面</view>
+        <view class="rowright row01" bindtap="bindExample" data-name="用Java写一个水仙花数">用Java写一个水仙花数</view>
+        <view class="rowright row01" bindtap="bindExample" data-name="用python写一个二叉树">用python写一个二叉树</view>
+      </view>
+</view>
+<view class="chatgpt" wx:for="{{talkObj}}" wx:key="index">
+  <view class="chatuser">
+      <image src="/static/用户 (3).png" style="width: 70rpx;height: 70rpx;overflow: hidden;border-radius: 20rpx;margin-right: 15rpx;margin-left: 20rpx;"></image>
+      <view class="chatright">{{item.user}}</view>
+  </view>
+  <view class="chatboot">
+      <image src="https://636c-cloud1-4gsna3lu4fd8e5fb-1313325135.tcb.qcloud.la/xpblog/IMG_5491(20230320-133815).PNG?sign=bb1bc83cbc140f0860fefad599827d7c&t=1679290760" style="width: 70rpx;height: 70rpx;overflow: hidden;border-radius: 50rpx;margin-top: 20rpx;margin-left: 20rpx;"></image>
+      <view class="chatbootright">
+        <towxml nodes="{{item.article}}" style="width: 90%;" />
+        <image src="/static/复制 (2).png" style="width: 50rpx;height: 50rpx;margin-top: 10rpx;z-index: 999;" bindtap="bindCopy" data-value="{{index}}"></image>
+      </view>
+  </view>
+</view>
+<view style="width: 100%;height: 200rpx;"></view>
+<!-- <rich-text space="nbsp" nodes="{{richText}}"></rich-text> -->
+<view class="send">
+  <input placeholder="请输入对话" bindinput="bindValue" value="{{text}}"/>
+  <image src="/static/send.png" style="width: 60rpx;height: 60rpx;position: relative;right: 100rpx;z-index: 999;" bindtap="bindButton"></image>
+  <!-- <button bindtap="bindButton" style="color: white;">发送</button> -->
+</view>

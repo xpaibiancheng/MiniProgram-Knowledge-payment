@@ -1,0 +1,2 @@
+<!--pages/gongzhongView/gongzhongView.wxml-->
+<web-view src="{{url}}"></web-view>

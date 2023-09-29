@@ -1,0 +1,113 @@
+<!--pages/user/user.wxml-->
+<!-- 未登录显示 -->
+<view style="padding-top: 100rpx;" wx:if="{{loginFlag==0}}">
+  <!-- 图片区域 -->
+  <view class="login_photo">
+    <image src="https://636c-cloud1-4gsna3lu4fd8e5fb-1313325135.tcb.qcloud.la/xpblog/IMG_5104.PNG?sign=dba60d02dcb7cd6fec1aa3b12b7bf891&t=1677937533"></image>
+  </view>
+  <view class="login_txt">
+    <view class="txt_row01" style="font-size: 40rpx;">扫榻以待</view>
+    <view class="txt_row02"></view>
+    <view class="txt_row03" style="color: rgb(107, 107, 107);font-size: 28rpx;">业精于勤，荒于嬉；行成于思，毁于随</view>
+  </view>
+  <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" class="login" bindtap="bindSubLogin">登录</button>
+</view>
+<!-- 登录显示 -->
+<view wx:if="{{loginFlag==1}}">
+  <view class="idnexTopbg">
+    <image class="idnexTopbgImg"  src="https://6d61-mamengkeji-9g3i82pg37b59653-1320854159.tcb.qcloud.la/%E7%AB%99%E5%86%85%E7%85%A7%E7%89%87/%E7%A0%81.png?sign=b2baf3d1a0bebc73fa6041e15b2f2171&t=1695783627"></image>
+  </view>
+  <view style="width: 100%;height: 300rpx;"></view>
+  <view class="indexInfo">
+        <view class="infoViewImg">
+            <image src="{{userInfo.userFace}}" mode=""/>
+        </view>
+        <view class="infoViewName_Hao">
+            <view class="infoName">{{userInfo.userName}}</view>
+            <view class="infoPhone">手机号:{{userInfo.userPhone}}</view>
+            <view class="infoCode">
+                <view>星球编号:{{userInfo.codeNum}}</view>
+                <image style="width: 40rpx;height: 40rpx;" src="/static/复制 (2).png" data-value="{{userInfo.codeNum}}" bindtap="CopyBtn"/>
+            </view>
+        </view>
+        <view class="infoViewVip" wx:if="{{userInfo.vipFlag==0}}" bindtap="bindBuyVip">
+            <image class="infoViewVipIco" src="/static/VIP (2).png" mode=""/>
+            <view class="infoViewText">星球成员</view>
+        </view>
+        <view class="infoViewVip" wx:if="{{userInfo.vipFlag==1}}">
+            <image class="infoViewVipIco" src="/static/VIP (1).png" mode=""/>
+            <view class="infoViewText">星球会员</view>
+        </view>
+  </view>
+  <view class="indexUserOrder">
+        <!-- 学习专区 -->
+        <view class="indexUserOrderSplic">
+            <view style="width:30%;border-bottom: 3rpx solid #ccc;margin-right: 15rpx;"></view>
+            <view>我的星球专区</view>
+            <view style="width:30%;border-bottom: 3rpx solid #ccc;margin-left: 15rpx;"></view>
+        </view>
+        <!-- 收藏文章-->
+        <view class="indexGroups">
+            
+            <!-- 项目源码 -->
+            <view class="indexUserOrderRow" bindtap="bindToCodePro">
+                <image class="indexUserOrderRowImg" src="/static/源代码.png" mode=""/>
+                <view class="indexUserOrderRowView">项目源码</view>
+            </view>
+            <!-- 视频学习 -->
+            <view class="indexUserOrderRow" bindtap="bindToVideo">
+                <image class="indexUserOrderRowImg" src="/static/课程 (2).png" mode=""/>
+                <view class="indexUserOrderRowView">我的学习</view>
+            </view>
+            <!-- 会员权益 -->
+            <view class="indexUserOrderRow" bindtap="bindVipCenter">
+                <image class="indexUserOrderRowImg" src="/static/会员中心 (2).png" mode=""/>
+                <view class="indexUserOrderRowView">会员中心</view>
+            </view>
+            <!-- 开通会员 -->
+            <view class="indexUserOrderRow" bindtap="bindBuyVip">
+                <image class="indexUserOrderRowImg" src="/static/会员 (2).png" mode=""/>
+                <view class="indexUserOrderRowView" >开通会员</view>
+            </view>
+        </view>
+  </view>
+  <!-- 其他 -->
+  <view class="indexUserOther">
+    <view class="indexUserRows" >
+        <view class="indexUserRowsEditor" bindtap="bindNavToInfo">
+            <image class="EditorImg" src="/static/编辑.png  " mode=""/>
+            <view class="EdtorText">更改个人信息</view>
+            <view class="EditorIco">></view>
+        </view>
+        <view class="indexUserRowsEditor" bindtap="bindPartTime">
+            <image class="EditorImg" src="/static/会员中心.png" mode=""/>
+            <view class="EdtorText">线上兼职</view>
+            <view class="EditorIco">></view>
+        </view>
+        <view class="indexUserRowsEditor" bindtap="bindContact">
+            <image class="EditorImg" src="/static/联系客服.png" mode=""/>
+            <view class="EdtorText">联系客服</view>
+            <view class="EditorIco">></view>
+        </view>
+        
+        <view class="indexUserRowsEditor" bindtap="bindMini">
+            <image class="EditorImg" src="/static/小程序 (1) (1).png" mode=""/>
+            <view class="EdtorText">关于小程序</view>
+            <view class="EditorIco">></view>
+        </view>
+        <view class="indexUserRowsEditor" bindtap="bindAboutWork">
+            <image class="EditorImg" src="/static/关于.png" mode=""/>
+            <view class="EdtorText">关于工作室 </view>
+            <view class="EditorIco">></view>
+        </view>
+        <view class="indexUserRowsEditor" bindtap="bindGithub">
+            <image class="EditorImg" src="/static/github-fill (1).png" mode=""/>
+            <view class="EdtorText">小程序开源</view>
+            <view class="EditorIco">></view>
+        </view>
+        <button type="primary" style="border-radius: 20rpx;width: 90%;" bindtap="bindClear">退出登录</button>
+    </view>
+  </view>
+</view>
+<view style="width: 100%;height: 50rpx;"> 
+</view>

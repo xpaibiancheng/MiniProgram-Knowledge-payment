@@ -1,0 +1,208 @@
+/* pages/codeProDetail/codeProDetail.wxss */
+page{
+    background-color: rgb(247, 247, 247);
+}
+.detailVideo{
+    width: 100%;
+
+}
+.detailVideoPick{
+    width: 100%;
+}
+.titlePriceSoon{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.titleDetail{
+    width: 95%;
+    padding-top: 20rpx;
+
+}
+.priceSoon{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20rpx;
+    margin-top: 30rpx;
+}
+.detailInfo{
+    width: 100%;
+    margin-top: 40rpx;
+    background-color: white;
+}
+.detailco{
+    width: 95%;
+    margin: 20rpx auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.detailcoRows{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.detailcoRows>image{
+    width: 50rpx;
+    height: 50rpx;
+}
+.detailText{
+    width: 95%;
+    margin: 15rpx auto;
+}
+.detailText{
+    line-height:1.5;
+}
+.detailBottom{
+    position: fixed;
+    bottom: 0rpx;
+    width: 100%;
+    height: 100rpx;
+    background-color: rgb(247, 247, 247);
+    display: flex;
+    flex-direction: row;
+    align-items: center;justify-content: space-between;
+}
+.detailBottom>view{
+    width: 30%;
+    height: 80rpx;
+    border-radius: 30rpx;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 资源获取 */
+.codeProUrl{
+    position: fixed;
+    top: 350rpx;
+    left: 70rpx;
+    width: 80%;
+    height: 300rpx;
+    background-color:white ;
+    border-radius: 20rpx;
+    border: 2px solid #3478f6; /* 设置蓝色边框 */
+    box-shadow: 0 0 3px #3478f6;
+    display: flex;
+    flex-direction: column;
+
+}
+.urlTop{
+    width: 98%;
+    height: 60rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    box-shadow:0 1px #3478f6;
+    margin:10rpx auto;
+}
+.urlName{
+    width: 98%;
+    margin: 10rpx auto;
+}
+.urlAddress{
+    width: 98%;
+    margin: 10rpx auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.urlAddressuRL{
+    width: 80%;
+    border: 2px solid #3478f6; /* 设置蓝色边框 */
+    box-shadow: 0 0 1px #3478f6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+   
+}
+.urlAddressCopy{
+    background-color:green;
+    height: 50rpx;
+    color: white;
+    font-size: 27rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 动画 */
+.fade-in-down {
+    animation-name: fade-in-down;
+    animation-duration: 1s;
+  }
+  
+  @keyframes fade-in-down {
+    from {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+} 
+/* 下单方式 */
+.payStyleSelect{
+    width: 80%;
+    height: 390rpx;
+    position: fixed;
+    left: 80rpx;
+    top: 400rpx;
+    background-color: white;
+    border-radius: 20rpx;
+    border: 2px solid rgb(9, 158, 59); /* 设置蓝色边框 */
+    box-shadow: 0 0 1px rgb(9, 158, 59);
+}
+.styleRows{
+    width: 95%;
+    height: 80rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin:auto;
+}
+.styleRadios{
+    width: 95%;
+    
+    border-bottom: 5rpx solid #ccc;
+    border-top: 5rpx solid #ccc;
+    margin: 10rpx auto;
+}
+.styleRgroups{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20rpx;
+}
+.confirmBu{
+    width: 95%;
+    margin: 30rpx auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.confirmBu>view{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}

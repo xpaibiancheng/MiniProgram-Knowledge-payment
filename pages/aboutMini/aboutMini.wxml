@@ -1,0 +1,36 @@
+<!--pages/aboutMini/aboutMini.wxml-->
+<view style="font-weight: 550;">
+    <text style="color: white;">eac</text>  欢迎走进由码梦网络科技打造的集在线课程、教育培训、专业咨询、技能分享、产品定制的技术社群：
+</view>
+<view style="font-weight: 550;margin-left: 10rpx;">
+    1.编程星球是什么？
+</view>
+<view >
+    <text style="color: white;">eac</text>编程导航是帮你学习编程、做项目少走弯路的平台，也是学生、商户、用户--星球主点对点合作的载体
+</view>
+<view style="font-weight: 550;margin-left: 10rpx;">
+    2.主体内容包括：
+</view>
+<view>
+    <view>
+        <text style="color: white;">ea</text>（1）技术文章：定时更新关于的技术文档，学习路线，帮助学生大学伊始做好专业定位，早做打算，专心钻研某一方向（如前端：微信小程序方向、H5，C3方向；后端：PHP、go、Java、Python方向），还包括计算机二级备考指南，英语四级备考指南，计算机程序设计员备考指南等
+    </view>
+    <view>
+        <text style="color: white;">ea</text>（2）项目源码：工作室手敲原生项目-包含上千个网站和微信小程序项目、gitHub优质项目源码
+    </view>
+    <view>
+        <text style="color: white;">ea</text>（3）编程工具箱：在线编程工具，用户随时随地快捷运行源码，方便简单
+    </view>
+    <view>
+        <text style="color: white;">ea</text>（4）※智能AI：用户无需使用魔法，随时随地搜索使用
+    </view>
+    <view>
+        <text style="color: white;">ea</text>（5）视频学习：各个编程工具（如Idea，PHP，Linux……）的搭建与优质开源项目部署，从0到1开发项目
+    </view>
+    <view>
+        <text style="color: white;">ea</text>（6）产品定制：接个人、商户（网站/微信小程序）定制，按需定价，一次收费，价格全网最低
+    </view>
+    <view>
+        <text style="color: white;">ea</text>（7）※编程星球专属活动：如免费领书、每日学习打卡-领周边（包括抱枕、笔筒……）-满30天领笔筒，满60天领抱枕等;-------大家一起卷起来！！！
+    </view>
+</view>

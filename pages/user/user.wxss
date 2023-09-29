@@ -1,0 +1,200 @@
+/* pages/user/user.wxss */
+page{
+background-color: rgb(247, 247, 247);
+}
+.login_photo{
+    width: 100%;
+    margin-top: 150rpx;
+  }
+  .login_photo>image{
+    width: 100%;
+  }
+  .login_txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-left: 80rpx;
+    margin-top: 100rpx;
+  }
+  .login_txt>view{
+    margin-bottom: 20rpx;
+  }
+  .txt_row02{
+    width: 200rpx;
+    height: 10rpx;
+    border-radius: 30rpx;
+    background:-webkit-linear-gradient(left,rgb(92,104,206),rgb(171,179,241),white);
+  }
+  .login{
+    background-color: rgb(92, 104, 206);
+    border-radius: 50rpx;
+    color: white;
+    margin-top: 100rpx;
+  }
+
+/* 第二区域 */
+.idnexTopbg {
+    width: 100%;
+    height: 390rpx;
+    position: absolute; /* 添加定位属性 */
+  }
+  
+.idnexTopbgImg {
+    height: 100%;
+}
+
+.indexInfo{
+    width: 97%;
+    height: 230rpx;
+    position: relative;
+    z-index: 1;
+    margin: 20rpx auto;
+    border-radius: 20rpx;
+    background-color: white;
+   
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.infoViewImg{
+    width: 25%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.infoViewImg>image{
+    width: 170rpx;
+    height: 170rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid white; /* 设置蓝色边框 */
+    box-shadow: 0 0 5px #3478f6; /* 添加发光效果 */
+}
+.infoViewName_Hao{
+    width: 45%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.infoName{
+    /* font-size: 37rpx; */
+    margin-left: 30rpx;
+    color: #3478f6;
+    font-weight: 550;
+    
+}
+.infoPhone{
+    margin-top: 15rpx;
+    margin-bottom: 15rpx;
+    color: rgb(107, 107, 107);
+    font-size: 30rpx;
+    margin-left: 30rpx;
+}
+.infoCode{
+    font-size: 30rpx;
+    color: rgb(107, 107, 107);
+    margin-left: 30rpx;
+    display: flex;
+    flex-direction: row;
+}
+.infoViewVip{
+    width: 25%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.infoViewVipIco{
+    width: 120rpx;
+    height: 120rpx;
+}
+.infoViewText{
+    font-size: 27rpx;
+    
+}
+/* 学习专区 */
+.indexUserOrder{
+    width: 97%;
+    height: 260rpx;
+    margin:20rpx auto;
+    background-color: white;
+    border-radius: 20rpx;
+}
+.indexUserOrderSplic{
+    width: 95%;
+    margin: 10rpx auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20rpx;
+
+}
+.indexUserOrderSplic>image{
+    width: 60rpx;
+    height: 60rpx;
+    margin-right: 20rpx;
+    padding-bottom: 15rpx;
+    
+}
+.indexGroups{
+    width: 98%;
+    margin: 20rpx auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20rpx;
+    
+}
+.indexGroups>view{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.indexUserOrderRowImg{
+    width: 80rpx;
+    height: 80rpx;
+    
+}
+.indexUserOrderRowView{
+    margin-top: 10rpx;
+    font-size: 27rpx;
+    
+}
+.indexUserOther{
+    width: 97%;
+    background-color: white;
+    border-radius: 20rpx;
+    margin: 20rpx auto;
+}
+.indexUserRows{
+    width: 97%;
+    margin: 20rpx auto;
+  
+}
+.indexUserRowsEditor{
+    width: 95%;
+    height: 80rpx;
+    display: flex;
+    
+    flex-direction: row;
+    align-items: center;
+    margin: 20rpx auto;
+    border-bottom: solid 2rpx #ccc;
+}
+.EditorImg{
+    width: 60rpx;
+    height: 60rpx;
+    
+}
+.EdtorText{
+    width: 80%;
+    margin-left: 30rpx;
+}

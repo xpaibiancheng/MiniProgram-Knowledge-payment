@@ -1,0 +1,16 @@
+<view class="allCon">
+    <image class="imgs" mode="widthFix"  src="{{imgs}}" data-info="{{imgs}}" bindtap="bindPreviewImg"/>
+    <view class="rows">
+        <text class="rowsText" >微信号:{{weChatNum}}</text>
+        <view class="rowsCopy" bindtap="bindPrevieWechat" data-info="{{weChatNum}}">复制信息</view>
+    </view>
+    <view class="rows">
+        <text class="rowsText">手机号:{{phoneNum}}</text>
+        <view class="rowsCopy" bindtap="bindPreviewPhone" data-info="{{phoneNum}}">复制信息</view>
+    </view>
+    <view class="rows">
+        <text class="rowsText">QQ号:{{qq}}</text>
+        <view class="rowsCopy" bindtap="bindPreviewQQ" data-info="{{qq}}">复制信息</view>
+    </view>
+    <button  type="primary" open-type="contact" bindcontact="handleContact" session-from="sessionFrom" style="border-radius: 15rpx;width: 95%;">快速连接客服</button>
+</view> 

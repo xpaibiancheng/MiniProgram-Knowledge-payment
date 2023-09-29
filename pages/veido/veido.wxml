@@ -1,0 +1,49 @@
+<!--pages/veido/veido.wxml-->
+<!-- 搜索页 -->
+<view class="codeSearch">
+    <view class="codeSearchLeft">搜索资源</view>
+    <image class="codeSearchImg" src="/static/搜索 (2).png"></image>
+</view>
+<!-- 课程区域 -->
+<view class="marketAll" wx:if="{{videoStudyRows.length!=0}}">
+    <!-- 商品分类 -->
+    <scroll-view scroll-y class="marLaft" >
+        <block wx:for="{{videoStudyList}}" wx:key="index">
+            <view class="marLaftText {{handIndex==index?'markLaTextBind':''}}" bindtap="bindHandIndex" data-index="{{index}}" data-value="{{item}}">
+                <text style="padding: 20rpx 0;">{{item}}</text>
+            </view>
+        </block>
+    </scroll-view>
+    <!-- 商品区域 -->
+    <view class="marRight">
+        <scroll-view   scroll-y style="width: 100%;height: 100%;">
+            <view class="marRightScroll" wx:for="{{videoStudyRows}}" wx:key="index" >
+                <view class="codeProViewRows" data-index="{{index}}" bindtap="navToCodeProDetail" >
+                    <!-- 图片 -->
+                    <image class="codeProViewRowsImg" src="{{item.showImgs}}" mode=""/>
+                    <view class="codeProViewRight">
+                        <!-- 标题 -->
+                        <view class="codeProViewRowsTitle" wx:if="{{item.price!=0}}">
+                            [付费或会员]{{item.title}}
+                        </view>
+                        <!-- 标题 -->
+                        <view class="codeProViewRowsTitle" wx:if="{{item.price==0}}">
+                            [免费资源]{{item.title}}
+                        </view>
+                        <!--价格和学习的人数  -->
+                        <view class="codeProViewRowsPriceNum">
+                            <view class="codeProViewRowsPrice">￥{{item.price}}</view>
+                            <view class="codeProViewRowsNum">{{item.studyCount}}人学习</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+
+        </scroll-view>
+    </view>
+</view>
+<view  wx:if="{{videoStudyRows.length==0}}" style="width: 100%;height: 500rpx;display: flex;flex-direction: column;justify-content: center;align-items: center;">
+    <image style="width: 150rpx;height: 150rpx;" src="/static/星球 (1).png" mode=""/>
+    <view style="color:rgb(107, 107, 107)">消失了:404</view>
+</view>
+

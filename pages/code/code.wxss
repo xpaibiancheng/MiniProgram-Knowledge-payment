@@ -1,0 +1,121 @@
+/* pages/code/code.wxss */
+page{
+    background-color: rgb(247, 247, 247);
+}
+/* 搜索框 */
+.codeSearch{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin:20rpx auto;
+
+}
+.codeSearch>input{
+    background-color: white;
+    border-radius: 20rpx;
+    width:70%;
+    height: 70rpx;
+    padding-left: 20rpx;
+}
+.codeSearch>button{
+    width: 150rpx;
+    font-size: 27rpx;
+}
+/* 搜索框反应的内容 */
+.codeSearchHidden{
+    width: 510rpx;
+    height: 200rpx;
+    background-color: white;
+    position: absolute;
+    top: 95rpx;
+    z-index: 999;
+    left: 20rpx;
+    border: 2px solid white; /* 设置蓝色边框 */
+    box-shadow: 0 0 5px #3478f6; /* 添加发光效果 */
+}
+.hiddenText{
+    margin-top: 20rpx;
+    margin-left: 20rpx;
+}
+/* 分类 */
+.codeClass{
+    width: 700rpx;
+    height: 60rpx;
+    margin: 20rpx auto;
+    white-space: nowrap;
+    line-height: 2;
+}
+.codeClassRow{
+    display: inline-flex;
+    margin-left: 20rpx;
+}
+/* 筛选时样式 */
+.classFilter{
+    background-color: #3478f6;
+    color: white;
+    border-radius: 15rpx;
+}
+/* 资源 */
+.codeProView{
+    width: 100%;
+    height: 1200rpx;
+    display: flex;
+    flex-wrap: wrap;
+}
+.codeProViewTemp{
+    width: 95%;
+    margin: 20rpx auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: start;
+}
+.codeProViewRows{
+    width:48%;
+    height: 350rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    background-color: white;
+    margin-left: 10rpx;
+    margin-top: 15rpx;
+}
+.codeProViewRowsImg{
+    width:95%;
+    height: 200rpx;
+    padding-top: 10rpx;
+}
+.codeProViewRowsTitle{
+    width: 95%;
+    
+    font-size: 27rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-top: 10rpx;
+}
+.codeProViewRowsPriceNum{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15rpx;
+}
+.codeProViewRowsPrice{
+    color: gold;
+    font-size: 30rpx;
+    margin-left: 10rpx;
+}
+.codeProViewRowsNum{
+    color: white;
+    background-color:rgb(175, 147, 76);
+    border-radius: 10rpx;
+    font-size: 27rpx;
+    margin-right: 10rpx;
+}

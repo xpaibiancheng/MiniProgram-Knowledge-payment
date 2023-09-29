@@ -1,0 +1,99 @@
+/* pages/market/market.wxss */
+page{
+    background-color: rgb(247, 247, 247);
+}
+.classNavIndex{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+.navIndexRows{
+    width: 45%;
+    height: 60rpx;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.clickStyle{
+    border-bottom: solid 5rpx cornflowerblue;
+    font-weight: 550;
+
+}
+.classInfo{
+    width: 100%;
+    height: 100vmax;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.classInfo_Left{
+    width: 25%;
+    height: 100%;
+}
+.classInfo_Left>view{
+    width: 100%;
+    height: 100rpx;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.classInfo_Right{
+    width: 75%;
+    height: 100%;
+    background-color: white;
+    
+}
+.classInfoRghtTop{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20rpx;
+    color: rgb(107, 107, 107);
+
+}
+.classInfoDetail{
+    width: 100%;
+    height: 1200rpx;
+}
+.classInfoDetailRows{
+    width: 95%;
+    margin-left: 20rpx;
+    margin-top: 20rpx;
+    display: flex;
+    flex-direction: row;
+
+    
+}
+.classInfoDetailRowsImgs{
+    width:250rpx;
+    height: 160rpx;
+    border-radius: 10rpx;
+}
+.classInfoDetailRowsRight{
+    margin-left: 10rpx;
+}
+.DetailRowsRightTitle{
+    font-size: 30rpx;
+    height: 80%;
+    width: 100%;
+}
+.DetailRowsRightBo{
+    font-size: 27rpx;
+    color: rgb(107, 107, 107);
+}
+
+.clickStyleTwo{
+    font-weight: 550;
+    background-color: white;
+    color: royalblue;
+}
