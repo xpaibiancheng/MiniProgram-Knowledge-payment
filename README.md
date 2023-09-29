@@ -10,7 +10,7 @@
 // 初始化云环境
 
     wx.cloud.init({
-        env:'mamengkeji-9g3i82pg37b59653'
+        env:''
     })
 ```
 2、有商户号的在cloudfunction目录下的payPre更改index.js的
